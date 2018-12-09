@@ -20,11 +20,14 @@ export class EditUserComponent implements OnInit {
    'name': [
      { type: 'required', message: 'Name is required.' }
    ],
-   'surname': [
-     { type: 'required', message: 'Surname is required.' }
-   ],
    'age': [
      { type: 'required', message: 'Age is required.' },
+   ],
+   'email': [
+     { type : 'required', message: 'Email is required.'}
+   ],
+   'phone': [
+     { type : 'required', message: 'Phone is required.'}
    ]
  };
 
@@ -50,8 +53,9 @@ export class EditUserComponent implements OnInit {
   createForm() {
     this.exampleForm = this.fb.group({
       name: [this.item.name, Validators.required],
-      surname: [this.item.surname, Validators.required],
-      age: [this.item.age, Validators.required]
+      age: [this.item.age, Validators.required],
+      email: [this.item.email, Validators.required],
+      phone: [this.item.phone, Validators.required]
     });
   }
 

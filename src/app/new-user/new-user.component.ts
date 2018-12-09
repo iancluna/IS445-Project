@@ -19,11 +19,14 @@ export class NewUserComponent implements OnInit {
    'name': [
      { type: 'required', message: 'Name is required.' }
    ],
-   'surname': [
-     { type: 'required', message: 'Surname is required.' }
-   ],
    'age': [
      { type: 'required', message: 'Age is required.' },
+   ],
+   'email': [
+     { type: 'required', message: 'Email is required.'},
+   ],
+   'phone': [
+     { type : 'required', message: 'Phone is required.'}
    ]
  };
 
@@ -41,8 +44,9 @@ export class NewUserComponent implements OnInit {
   createForm() {
     this.exampleForm = this.fb.group({
       name: ['', Validators.required ],
-      surname: ['', Validators.required ],
-      age: ['', Validators.required ]
+      age: ['', Validators.required ],
+      email: ['', Validators.required ],
+      phone: ['', Validators.required ]
     });
   }
 
@@ -63,8 +67,10 @@ export class NewUserComponent implements OnInit {
     this.avatarLink = "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg";
     this.exampleForm = this.fb.group({
       name: new FormControl('', Validators.required),
-      surname: new FormControl('', Validators.required),
       age: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      phone: new FormControl('', Validators.required),
+
     });
   }
 
