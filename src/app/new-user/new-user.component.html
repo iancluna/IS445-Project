@@ -42,6 +42,9 @@
             </ng-container>
           </div>
 
+<!-- Need to set limitations to phone number entries. Cannot start with 1 or 0, only 10 digits.
+     Can update/edit contacts with phone numbers including dashes - might be a problem? -->
+
           <div class="form-group">
             <mat-form-field class="input-style">
               <input matInput type="number" min="0" max="9999999999" placeholder="Phone" class="form-control" formControlName="phone">
